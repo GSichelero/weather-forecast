@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Dados do Tempo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h4>Informe abaixo uma nova localização</h4>
+  <ion-item>
+    <ion-label position="floating">Latitude</ion-label>
+    <ion-input type="text" [(ngModel)]="lat"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Longitude</ion-label>
+    <ion-input type="text" [(ngModel)]="lon"></ion-input>
+  </ion-item>
+  <ion-button (click)="atualizar(lat, lon)">Atualizar</ion-button>
+  
+  <h2>Dados da sua localização</h2>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Temperatura no momento</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h1>{{airTemp}}°C</h1>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Previsão do tempo daqui a 12 horas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h1>{{twelvehoursPrev}}</h1>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Previsão do tempo de amanhã</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h1>{{twentyfourhoursPrev}}</h1>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
